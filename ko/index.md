@@ -6,7 +6,7 @@ MAVLink는 매우 가벼운 드론(과 드론 구성 부품간 온보드) 통신
 
 MAVLink는 임의송신-가입 방식 및 점대점 방식을 혼용한 최신 설계 규칙을 따릅니다. 데이터 스트림은 **토픽**으로 전송하는 방식이며, [미션 프로토콜](services/mission.md) 또는 [매개변수 프로토콜](services/parameter.md)과 같은 설정 하위 프로토콜은 재전송 기능을 지닌 점대점 방식입니다.
 
-메시지는 [XML 파일로 정의합니다](messages/README.md). 각 XML 파일은 각 MAVLink 시스템에서 "고유 메시지"를 참조하는 식으로 지원하는 메시지 집합을 정의합니다. *대부분*의 지상 관제 머신과 오토파일럿에서 구현한 참조 메시지 집합은 [common.xml](messages/common.md)에 정의했습니다(대부분의 고유 메시지는 이 정의를 *기반으로 구성* 합니다).
+메시지는 [XML 파일로 정의합니다](messages/index.md). 각 XML 파일은 각 MAVLink 시스템에서 "고유 메시지"를 참조하는 식으로 지원하는 메시지 집합을 정의합니다. *대부분*의 지상 관제 머신과 오토파일럿에서 구현한 참조 메시지 집합은 [common.xml](messages/common.md)에 정의했습니다(대부분의 고유 메시지는 이 정의를 *기반으로 구성* 합니다).
 
 [Code generators](getting_started/generate_libraries.md) create software libraries for [specific programming languages](#supported_languages) from these XML message definitions, which can then be used by drones, ground control stations, and other MAVLink systems to communicate. The generated libraries are typically MIT-licensed, and can therefore be *used* without limits in any closed-source application without publishing the source code of the closed-source application.
 
@@ -67,12 +67,12 @@ The following generators are delivered by independent projects (and supported by
 
 ## 미리 빌드한 MAVLink C 라이브러리 {#prebuilt_libraries}
 
-*C* MAVLink Source Files (only) are auto-generated for the latest versions of all message [specifications/dialects](messages/README.md) (for both MAVLink 1 and 2):
+*C* MAVLink Source Files (only) are auto-generated for the latest versions of all message [specifications/dialects](messages/index.md) (for both MAVLink 1 and 2):
 
 - [c_library_v2](https://github.com/mavlink/c_library_v2) (MAVLink 2)
 - [c_library_v1](https://github.com/mavlink/c_library_v1) (MAVLink 1)
 
-[Using C Libraries](mavgen_c/README.md) explains how to use these libraries.
+[Using C Libraries](mavgen_c/index.md) explains how to use these libraries.
 
 ## 지원 {#support}
 

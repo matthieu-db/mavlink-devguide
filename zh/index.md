@@ -6,7 +6,7 @@ MAVLink是一种非常轻量级的消息传输协议, 用于地面控制终端�
 
 Mavlink 遵循现代混合发布-订阅和点对点设计模式: 数据流作为 **topics** 发送/发布的, 而配置子协议 (如 [路径点协议 ](services/mission.md)或 [参数协议](services/parameter.md)）是基于重传机制的点对点模式。
 
-消息内容[定义于与之关联的xml 文件中](messages/README.md)。 每个xml文件对应一个特定的MAVLink系统，并为该系统定义了专属的消息集（亦被称之为“语支dialect”）。 *大部分* 地面站和自动驾驶仪所采用的“通用消息集”定义于 [common.xml](messages/common.md)中 (大多数“语支”均是基于“通用消息集“*构建* 的：即，大多数“语支”所对应的xml文件里，均包含了common.xml) 。 每个xml文件对应一个特定的MAVLink系统，并为该系统定义了专属的消息集（亦被称之为“语支dialect”）。 *大部分* 地面站和自动驾驶仪所采用的“通用消息集”定义于 [common.xml](messages/common.md)中 (大多数“语支”均是基于“通用消息集“*构建* 的：即，大多数“语支”所对应的xml文件里，均包含了common.xml) 。
+消息内容[定义于与之关联的xml 文件中](messages/index.md)。 每个xml文件对应一个特定的MAVLink系统，并为该系统定义了专属的消息集（亦被称之为“语支dialect”）。 *大部分* 地面站和自动驾驶仪所采用的“通用消息集”定义于 [common.xml](messages/common.md)中 (大多数“语支”均是基于“通用消息集“*构建* 的：即，大多数“语支”所对应的xml文件里，均包含了common.xml) 。 每个xml文件对应一个特定的MAVLink系统，并为该系统定义了专属的消息集（亦被称之为“语支dialect”）。 *大部分* 地面站和自动驾驶仪所采用的“通用消息集”定义于 [common.xml](messages/common.md)中 (大多数“语支”均是基于“通用消息集“*构建* 的：即，大多数“语支”所对应的xml文件里，均包含了common.xml) 。
 
 [Code generators](getting_started/generate_libraries.md) create software libraries for [specific programming languages](#supported_languages) from these XML message definitions, which can then be used by drones, ground control stations, and other MAVLink systems to communicate. The generated libraries are typically MIT-licensed, and can therefore be *used* without limits in any closed-source application without publishing the source code of the closed-source application.
 
@@ -67,12 +67,12 @@ The following generators are delivered by independent projects (and supported by
 
 ## 预建的基于C语言的MAVLink库 {#prebuilt_libraries}
 
-*C* MAVLink Source Files (only) are auto-generated for the latest versions of all message [specifications/dialects](messages/README.md) (for both MAVLink 1 and 2):
+*C* MAVLink Source Files (only) are auto-generated for the latest versions of all message [specifications/dialects](messages/index.md) (for both MAVLink 1 and 2):
 
 - [c_library_v2](https://github.com/mavlink/c_library_v2) (MAVLink 2)
 - [c_library_v1](https://github.com/mavlink/c_library_v1) (MAVLink 1)
 
-[Using C Libraries](mavgen_c/README.md) explains how to use these libraries.
+[Using C Libraries](mavgen_c/index.md) explains how to use these libraries.
 
 ## 支持 {#support}
 
